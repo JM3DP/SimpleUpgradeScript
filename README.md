@@ -1,6 +1,7 @@
 Hi, thank you for taking an interest in my first bash script project.
 It's not quite perfect yet, but I will be working on this and other scripts in the future.
 This is mainly a tool for learning, so I don't plan on spending too much time and effort on this.
+The script will send you an email notification when it finishes executing.
 
 
 # //RUN AS ROOT TO AVOID PERMISSIONS ERRORS//
