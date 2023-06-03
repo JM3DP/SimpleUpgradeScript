@@ -3,7 +3,7 @@ It's not quite perfect yet, but I will be working on this and other scripts in t
 This is mainly a tool for learning, so I don't plan on spending too much time and effort on this.
 
 
-#//RUN AS ROOT TO AVOID PERMISSIONS ERRORS//
+# //RUN AS ROOT TO AVOID PERMISSIONS ERRORS//
 
 To get started, simply run the following command. This command will make a directory called /etc/scripts, apply permissions to run the script, as well as execute the script.
 
