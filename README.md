@@ -28,7 +28,7 @@ Next, you can either leave this blank and edit the /etc/nullmailer/remotes file 
   
   
   
-Please note that this script, at the time of writing this, will not reboot your system. If you would like to automatically reboot, add the following line under >sudo apt clean:
+Please note that this script, at the time of writing this, will not reboot your system. If you would like to automatically reboot, add the following line under ## sudo apt clean:
   
   >#Reboot the system
     
