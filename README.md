@@ -7,7 +7,7 @@ This is mainly a tool for learning, so I don't plan on spending too much time an
 
 To get started, simply run the following command. This command will make a directory called /etc/UbuntuSimpleUpgrader, apply permissions to run the script, as well as execute the script.
 
->sudo mkdir -p /etc/UbuntuSimpleUpgrader && sudo curl -sSL -o /etc/scripts/UbuntuSimpleUpgrader https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/UbuntuSimpleUpgrader && sudo chmod +x /etc/UbuntuSimpleUpgrader/UbuntuSimpleUpgrader && sudo /etc/UbuntuSimpleUpgrader/UbuntuSimpleUpgrader
+>sudo mkdir -p /etc/UbuntuSimpleUpgrader && sudo curl -sSL -o /etc/UbuntuSimpleUpgrader/UbuntuSimpleUpgrader https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/UbuntuSimpleUpgrader && sudo chmod +x /etc/UbuntuSimpleUpgrader/UbuntuSimpleUpgrader && sudo /etc/UbuntuSimpleUpgrader/UbuntuSimpleUpgrader
 
 This will install mail utils, nullmailer, and set up a cron job based on user-input data.
 
