@@ -34,7 +34,8 @@ fi
 
 
 # Create a cron job entry
-cron_entry="$minute $hour $day $month $weekday root /etc/scripts/apt-update.sh $recipient"
+cron_entry="$minute $hour $day $month $weekday root /bin/bash /etc/scripts/update_upgrade.sh $recipient"
+
 
 # Add the cron job entry to the crontab
 sudo crontab -l | { cat; echo "$cron_entry"; } | sudo crontab -
