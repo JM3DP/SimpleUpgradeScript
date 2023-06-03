@@ -1,1 +1,40 @@
 
+#!/bin/bash
+
+# Install required packages
+sudo apt update
+sudo apt install -y nullmailer mailutils
+
+# Set up Nullmailer
+sudo dpkg-reconfigure nullmailer
+
+# Create the scripts directory if it doesn't exist
+sudo mkdir -p /etc/scripts
+
+# Download the update_upgrade.sh script from the provided URL
+sudo curl -sSL -o /etc/scripts/update_upgrade.sh https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/update_upgrade.sh
+
+# Set the execute permission for the script
+sudo chmod +x /etc/scripts/update_upgrade.sh
+
+# Prompt the user for cron job schedule details
+read -p "CRONJOB:Enter the minute (0-59): " minute
+read -p "CRONJOB:Enter the hour (0-23): " hour
+read -p "CRONJOB:Enter the day of the month (1-31)(enter '*' to skip): " day
+read -p "CRONJOB:Enter the month (1-12)(enter '*' to skip): " month
+read -p "CRONJOB:Enter the day of the week (0-7, where both 0 and 7 represent Sunday): " weekday
+read -p "Enter the recipient email address: " recipient
+
+# Validate the recipient email address
+if ! [[ "$recipient" =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
+    echo "Invalid email address. Please provide a valid email address."
+    exit 1
+fi
+
+# Create a cron job entry
+cron_entry="$minute $hour $day $month $weekday root /etc/scripts/apt-update.sh $recipient"
+
+# Add the cron job entry to the crontab
+sudo crontab -l | { cat; echo "$cron_entry"; } | sudo crontab -
+
+echo "Installation and setup completed successfully."
