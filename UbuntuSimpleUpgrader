@@ -26,7 +26,7 @@ read -p "CRONJOB:Enter the day of the week (0-7, where both 0 and 7 represent Su
 read -p "Enter the recipient email address: " recipient
 
 # Validate the recipient email address
-if ! [[ "$recipient" =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
+if ! [ "$recipient" =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
     echo "Invalid email address. Please provide a valid email address."
     exit 1
 fi
