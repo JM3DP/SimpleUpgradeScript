@@ -5,9 +5,9 @@ This is mainly a tool for learning, so I don't plan on spending too much time an
 
 # //RUN AS ROOT TO AVOID PERMISSIONS ERRORS//
 
-To get started, simply run the following command. This command will make a directory called /etc/scripts, apply permissions to run the script, as well as execute the script.
+To get started, simply run the following command. This command will make a directory called /etc/UbuntuSimpleUpgrader, apply permissions to run the script, as well as execute the script.
 
->sudo mkdir -p /etc/scripts && sudo curl -sSL -o /etc/scripts/UbuntuSimpleUpgrader https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/UbuntuSimpleUpgrader && sudo chmod +x /etc/scripts/UbuntuSimpleUpgrader && sudo /etc/scripts/UbuntuSimpleUpgrader
+>sudo mkdir -p /etc/UbuntuSimpleUpgrader && sudo curl -sSL -o /etc/scripts/UbuntuSimpleUpgrader https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/UbuntuSimpleUpgrader && sudo chmod +x /etc/scripts/UbuntuSimpleUpgrader && sudo /etc/scripts/UbuntuSimpleUpgrader
 
 This will install mail utils, nullmailer, and set up a cron job based on user-input data.
 
