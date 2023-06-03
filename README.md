@@ -3,11 +3,11 @@ It's not quite perfect yet, but I will be working on this and other scripts in t
 This is mainly a tool for learning, so I don't plan on spending too much time and effort on this.
 
 
-//RUN AS ROOT TO AVOID PERMISSIONS ERRORS//
+#//RUN AS ROOT TO AVOID PERMISSIONS ERRORS//
 
 To get started, simply run the following command. This command will make a directory called /etc/scripts, apply permissions to run the script, as well as execute the script.
 
-sudo mkdir -p /etc/scripts && sudo curl -sSL -o /etc/scripts/UbuntuSimpleUpgrader https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/UbuntuSimpleUpgrader && sudo chmod +x /etc/scripts/UbuntuSimpleUpgrader && sudo /etc/scripts/UbuntuSimpleUpgrader
+>sudo mkdir -p /etc/scripts && sudo curl -sSL -o /etc/scripts/UbuntuSimpleUpgrader https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/UbuntuSimpleUpgrader && sudo chmod +x /etc/scripts/UbuntuSimpleUpgrader && sudo /etc/scripts/UbuntuSimpleUpgrader
 
 This will install mail utils, nullmailer, and set up a cron job based on user-input data.
 
@@ -30,10 +30,10 @@ Next, you can either leave this blank and edit the /etc/nullmailer/remotes file 
   
 Please note that this script, at the time of writing this, will not reboot your system. If you would like to automatically reboot, add the following line under sudo apt clean:
   
-  # Reboot the system
-    reboot now
+  ># Reboot the system
+   > reboot now
   
-  NOTE: Adding the reboot command will not automatically start any services that aren't scripted to start on reboot. Please verify and adjust your services accordingly!
+  **NOTE: Adding the reboot command will not automatically start any services that aren't scripted to start on reboot. Please verify and adjust your services accordingly!**
   
-  Thank you for using my script, I do hope it will be helpful to some!
+  *Thank you for using my script, I do hope it will be helpful to some! -Justin*
   
