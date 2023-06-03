@@ -8,8 +8,8 @@ sudo apt install -y nullmailer mailutils
 # Set up Nullmailer
 sudo dpkg-reconfigure nullmailer
 
-# Create the scripts directory if it doesn't exist
-sudo mkdir -p /etc/scripts
+# Create the USU directory if it doesn't exist
+sudo mkdir -p /etc/UbuntuSimpleUpgrader
 
 # Download the update_upgrade.sh script from the provided URL
 sudo curl -sSL -o /etc/scripts/update_upgrade.sh https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/update_upgrade.sh
@@ -34,7 +34,7 @@ fi
 
 
 # Create a cron job entry
-cron_entry="$minute $hour $day $month $weekday root /bin/bash /etc/scripts/update_upgrade.sh $recipient"
+cron_entry="$minute $hour $day $month $weekday root /bin/bash /etc/UbuntuSimpleUpgrader/update_upgrade.sh $recipient"
 
 
 # Add the cron job entry to the crontab
