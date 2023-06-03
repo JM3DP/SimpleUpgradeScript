@@ -12,10 +12,10 @@ sudo dpkg-reconfigure nullmailer
 sudo mkdir -p /etc/UbuntuSimpleUpgrader
 
 # Download the update_upgrade.sh script from the provided URL
-sudo curl -sSL -o /etc/scripts/update_upgrade.sh https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/update_upgrade.sh
+sudo curl -sSL -o /etc/UbuntuSimpleUpgrader/update_upgrade.sh https://raw.githubusercontent.com/JM3DP/SimpleUpgradeScript/main/update_upgrade.sh
 
 # Set the execute permission for the script
-sudo chmod +x /etc/scripts/update_upgrade.sh
+sudo chmod +x /etc/UbuntuSimpleUpgrader/update_upgrade.sh
 
 # Prompt the user for cron job schedule details
 read -p "CRONJOB:Enter the minute (0-59): " minute
